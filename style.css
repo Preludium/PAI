@@ -1,0 +1,28 @@
+li { list-style-type: square }
+
+#cena {color: red; /* id */
+    font-weight: bold}
+    
+.bold { font-weight: bold; }
+.underline {text-decoration: underline }
+
+.wstep {font-style: italic} /* klasa */
+
+td > img {border-style: solid; /* bezposrednio potomne */
+    border-color: blue;}
+
+td > img:hover {border-color: red;}
+
+h1 + h2 {letter-spacing: 5px;} 
+
+td[colspan=2] + p {font-size: small;}
+
+p + p {color:gray;}
+
+body {background-image: url(https://i.guim.co.uk/img/media/72e341d431283af6abc8e6c27ac840289bafe38f/0_32_723_434/master/723.jpg?width=300&quality=85&auto=format&fit=max&s=923787a2378ea92244e11e502533629f); 
+    background-repeat: repeat-y}
+
+h1 { color: blue }
+
+h1 { color: green }
+/* zostala zastosowana pozniejsza metoda */
