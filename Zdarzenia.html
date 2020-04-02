@@ -8,20 +8,24 @@
     <script type="text/javascript">
         $(document).ready(function () {
             alert('Czy wiesz, że możesz skopiować ten tekst przy pomocy skrótu Ctrl + C.');
+            $('button').bind('asdf', function () { alert('Asdf!'); });
         });
         function edit() {
-            var row = $(this);
-            row.html('<input id="edit" value="' + row.text() + '">');
+            const row = $(this);
+            row.html('<input id="edit" value="' + row.html() + '">');
 
-            $('#edit').blur(function () {
+            $('#edit').blur(() => {
                 row.text($(this).val());
                 row.one('click', edit);
             }).focus();
+
+            $('button').trigger('asdf');
         }
         $(function () {
             $('td').one('click', edit);
         });
     </script>
+    <script>alert('!DANGER!')</script>
     <style>
         .zielona{background: Pink;}
     </style>
@@ -33,5 +37,6 @@
         <tr><td>na</td></tr>
         <tr><td>...</td></tr>
     </table>
+    <button>przycisk</button>
 </body>
 </html>
