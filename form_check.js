@@ -43,7 +43,7 @@ function hideElement(e) {
     document.getElementById(e).style.visibility = 'hidden';
 }
 
-function alterRows(i, e) {// ?
+function alterRows(i, e) {
     if (e) {
         if (i % 2 == 1) 
             e.setAttribute("style", "background-color: Aqua;");
@@ -53,8 +53,6 @@ function alterRows(i, e) {// ?
         alterRows(++i, e);
     }
 }
-
-// alterRows(1, document.getElementsByTagName("tbody")[0]); // ???
 
 function nextNode(e) {
     while (e && e.nodeType != 1) 
@@ -84,3 +82,4 @@ function cnt(form, msg, maxSize) {
         msg.innerHTML = maxSize - form.value.length;
 }
    
+alterRows(1, document.getElementsByTagName("tr")[0]);
