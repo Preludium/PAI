@@ -21,9 +21,12 @@
 
             $('button').trigger('asdf');
         }
+        
         $(function () {
             $('td').one('click', edit);
         });
+
+        $('*').unbind();
     </script>
     <script>alert('!DANGER!')</script>
     <style>

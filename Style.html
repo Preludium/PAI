@@ -20,9 +20,9 @@
                 $('#toggle').toggleClass('zielona');
             });
             $('tr:even').addClass('zielona');
-            // TODO 12
+            $('ol.a > li .b:not(:has(a))').addClass('zielona');
         });
-    </script>
+        </script>
     <style>
         .zielona{background: Pink;}
     </style>
@@ -45,5 +45,11 @@
         <button>ugina się.</button>
         <span id="toggle">Zmiana przez przełączanie klas.</span>
     </div>
+    <ol class="a">
+        <li><div class="b">Pierwszy</div></li>
+        <li><a>Drugi</a></li>
+        <li><div class="b"><a>Trzeci</a></div></li>
+        <li>Czwarty</li>
+    </ol>
 </body>
 </html>
