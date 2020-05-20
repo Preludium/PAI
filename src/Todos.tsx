@@ -13,11 +13,12 @@ const Wrapper = Styled.div`
     padding: 5px;
 `;
 
-const StyledListItem = Styled.div`
+const StyledListItem = Styled.div<{checked: boolean}>`
     display: inline-flex;
     justify-content: center;
     width: 100%;
     padding: 5px;
+    ${({checked}) => checked ? "text-decoration: line-through;" : ""}
 `;
 
 interface TodosProps {
@@ -32,7 +33,9 @@ const Todos: FunctionComponent<TodosProps> = (props) => {
     props.todos.length > 0 ? (
       props.todos.map((todo) =>
           (!todo.checked || !props.filter) && (
-            <StyledListItem key={todo.id}>
+            <StyledListItem key={todo.id}
+                            checked={todo.checked}    
+            >
               <input type="checkbox"
                      checked={todo.checked}
                      onChange={() => props.handleOnChange(todo.id)}
